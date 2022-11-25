@@ -1,0 +1,526 @@
+:root {
+  /* Colors */
+
+  /* --clr-primary: hsl(209, 42%, 16%); */
+  --clr-primary: hsl(211, 45%, 14%);
+  --clr-bg-accent: #2d0000;
+  /* --clr-accent: hsl(38, 57%, 46%); */
+  --clr-accent: hsl(39, 31%, 58%);
+  --clr-nuetral-100: hsl(100, 100%, 100%);
+  --clr-nuetral-200: hsl(50, 63%, 77%);
+  --clr-btn-hover: hsl(38, 74%, 49%);
+  --clr-black-100: hsl(0, 0%, 10%);
+  --clr-black-200: hsl(0, 0%, 15%);
+  --clr-black-300: hsl(0, 0%, 20%);
+
+  /* Font Family */
+
+  --ff-body: "Montserrat", sans-serif;
+  --ff-heading: "Kanit", sans-serif;
+
+  /* Font Weights */
+
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+
+  /* 10px */
+  --fs-100: 0.625rem;
+  /* 12px */
+  --fs-200: 0.75rem;
+  /* 14px */
+  --fs-300: 0.875rem;
+  /* 16px */
+  --fs-400: 1rem;
+  /* 18px */
+  --fs-500: 1.125rem;
+  /* 24px */
+  --fs-600: 1.5rem;
+  /* 36px */
+  --fs-700: 2.25rem;
+  /* 48px */
+  --fs-800: 3rem;
+
+  /* font sizes */
+
+  --fs-label: var(--fs-200);
+  --fs-link: var(--fs-200);
+
+  --fs-logo: var(--fs-400);
+  --fs-link: var(--fs-300);
+  --fs-body-text: var(--fs-300);
+  --fs-title: var(--fs-400);
+  --fs-primary-nav: var(--fs-500);
+  --fs-sub-heading: var(--fs-600);
+  --fs-main-heading: var(--fs-700);
+
+  /* font weights */
+
+  --fw-small: var(--fw-light);
+  --fw-text: var(--fw-reg);
+  --fw-nav: var(--fw-semi-bold);
+  --fw-link: var(--fw-semi-bold);
+  --fw-sub-heading: var(--fw-semi-bold);
+  --fw-main-heading: var(--fw-bold);
+}
+
+/* !====================== */
+/* * - - Custom Reset - -  */
+/* !====================== */
+
+/* * - - Box sizing rules - - */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* * - - Remove default margin - - */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* * - -  Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed - -  */
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-accent);
+}
+
+/* * - - Set core root defaults - - */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: calc(100vh - 3.8em);
+}
+
+/* * - - Set core body defaults - - */
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-body);
+}
+
+/* * - - A elements that don't have a class get default styles - -  */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* * - - Heading Font Family - -  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading) !important;
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--fs-main-heading) !important;
+}
+
+/* Text Size */
+
+p {
+  font-size: var(--fs-body-text);
+  font-weight: var(--fw-text);
+  color: var(--clr-accent);
+}
+
+/* * - - Make images easier to work with - - */
+
+img {
+  width: 100%;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+iframe {
+  border: none;
+  border-radius: 12px;
+}
+
+/* -------------------- Reset End -------------------- */
+
+/* * ===== Ham Burger Menu ===== */
+.menutoggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  z-index: 1499;
+}
+.line {
+  fill: none;
+  stroke: var(--clr-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dasharray 350ms cubic-bezier(0.54, 0.05, 0.33, 0.86),
+    stroke-dashoffset 600ms cubic-bezier(0.54, 0.05, 0.33, 0.86);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.active .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.active .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.active .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* * ===== Ham Burger Menu End ===== */
+
+/* Header */
+
+.header {
+  padding-block: 0.75em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 2px solid var(--clr-accent);
+  z-index: 1500;
+  gap: 2em;
+  background-color: var(--clr-primary);
+}
+
+/* Logo */
+
+.logo {
+  font-size: var(--fs-logo);
+  font-weight: bold;
+  color: var(--clr-accent);
+}
+
+/* Main Nav */
+
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1500;
+  right: 0;
+  height: 0vh;
+  background-color: var(--clr-primary);
+  border-block: 1px solid var(--clr-accent);
+  visibility: collapse;
+  transition: height 350ms ease-in 50ms, visibility 0s ease-in 600ms;
+}
+.main-nav-list {
+  flex-direction: column;
+  gap: 4em;
+  margin-block: 7em;
+}
+
+/* Nav Link */
+
+.nav-link {
+  color: var(--clr-accent);
+  font-size: var(--fs-primary-nav);
+  font-weight: var(--fw-nav);
+  padding: 0.5em;
+  border: none;
+  position: relative;
+}
+.nav-link:hover {
+  color: var(--clr-nuetral-200);
+}
+
+/* Nav Active class */
+
+.current {
+  color: var(--clr-nuetral-200);
+  transition: color 425ms linear, box-shadow 425ms ease-in;
+}
+.current::after {
+  content: "";
+  width: 100%;
+  border-radius: 50px;
+  height: 4px;
+  position: absolute;
+  background-color: var(--clr-accent);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: foo 175ms ease-in-out;
+}
+@keyframes foo {
+  10% {
+    width: 100%;
+    transform: translateX(-20%);
+  }
+
+  25% {
+    width: 100%;
+    transform: translateX(-10%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(10%);
+  }
+  75% {
+    width: 100%;
+    transform: translateX(20%);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+.nav-item {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.active .nav {
+  height: 100vh;
+  visibility: visible;
+  transition: height 450ms ease-in;
+}
+.active .nav-item {
+  opacity: 1;
+  transition: opacity 755ms ease-in 200ms;
+}
+
+/* General Elements Style */
+
+.heading {
+  font-size: var(--fs-sub-heading);
+  color: var(--clr-accent);
+  font-weight: var(--fw-sub-heading);
+}
+.social-icon {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  align-items: center;
+  padding: 1em;
+}
+.s-icon {
+  width: 25px;
+}
+
+/* Content */
+
+.content {
+  height: calc(100vh - 3.8em);
+  width: 100%;
+  margin-top: 3.8em;
+}
+
+/* General Elements */
+
+/* Button */
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.25em 0.75em;
+  color: var(--clr-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--clr-accent);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--clr-btn-hover);
+  box-shadow: 0 0 4px rgb(150, 150, 150);
+  transition: background-color 175ms ease-in, box-shadow 175ms ease-in;
+  color: rgb(0, 0, 0);
+}
+
+/* Utility Classes  */
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.x-wide {
+  justify-content: space-between;
+}
+.x-center {
+  justify-content: center;
+}
+.y-center {
+  align-items: center;
+}
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+.gap {
+  gap: 3em;
+}
+.my-1 {
+  margin-bottom: 1em;
+}
+
+/* Even Col */
+
+.even-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5em;
+  column-gap: 1em;
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1em;
+  margin-top: 1em;
+}
+
+/* Form */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-block: 0.5em;
+  align-items: flex-start;
+}
+
+/* Media Queries */
+
+@media (min-width: 499px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 799px) {
+  :root {
+    /* Font Sizes */
+
+    --fs-primary-nav: var(--fs-300);
+
+    --fs-logo: var(--fs-600);
+    --fs-sub-heading: var(--fs-700);
+    --fs-main-heading: var(--fs-800);
+    --fs-body-text: var(--fs-400);
+
+    /* 
+      --fs-label: var(--fs-200);
+  --fs-link: var(--fs-200);
+  
+  --fs-logo: var(--fs-400);
+  --fs-link: var(--fs-300);
+  --fs-body-text: var(--fs-300);
+  --fs-title: var(--fs-400);
+  --fs-primary-nav: var(--fs-500);
+  --fs-sub-heading: var(--fs-600);
+  --fs-main-heading: var(--fs-700);
+    */
+
+    /* Font Weights */
+    --fw-sub-heading: var(--fw-bold);
+  }
+  .container {
+    width: 85%;
+  }
+  .menutoggle {
+    display: none;
+  }
+  .nav {
+    position: static;
+    border: none;
+    height: min-content;
+    visibility: visible;
+    background: none;
+  }
+  .main-nav-list {
+    flex-direction: row;
+    gap: 1em;
+    margin-block: 0;
+  }
+  .nav-item {
+    opacity: 1 !important;
+  }
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-item {
+    text-align: center;
+  }
+  .even-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .text {
+    max-width: 50ch;
+  }
+}
+@media (min-width: 1099px) {
+  :root {
+    --fs-primary-nav: var(--fs-500);
+  }
+  .footer-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .footer-item {
+    text-align: center;
+  }
+  .main-nav-list {
+    gap: 2em;
+  }
+  .even-columns {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+}
+.contact-text {
+  color: var(--clr-accent);
+}

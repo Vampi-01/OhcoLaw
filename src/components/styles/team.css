@@ -1,0 +1,45 @@
+.team-card-grid {
+  display: grid;
+  row-gap: 2em;
+}
+
+.card {
+  /* background: linear-gradient(128deg, var(--clr-primary), var(--clr-bg-accent)); */
+  padding: 2em 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 1px rgb(62, 62, 62);
+}
+.dp {
+  border-radius: 12px;
+  max-width: 361px;
+}
+.team-info {
+  text-align: center;
+}
+.profile-btn {
+  text-align: center;
+}
+.junior-team {
+  margin-top: 1em;
+}
+@media (min-width: 499px) {
+  .team-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+}
+@media (min-width: 799px) {
+  .team-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+  }
+}
+@media (min-width: 1099px) {
+  .team-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+  }
+}
+.header-sas {
+  background-color: aqua;
+}

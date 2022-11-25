@@ -1,0 +1,237 @@
+.h-sec-1 {
+  background-image: url(../images/home-banner.jpg);
+  background-repeat: no-repeat;
+  isolation: isolate;
+  position: relative;
+  height: calc(100vh - 3.8rem);
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+}
+.h-sec-1::after {
+  content: "";
+  position: absolute;
+  opacity: 0.7;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+}
+.btn-cta {
+  background-color: var(--clr-btn-hover);
+}
+.m-heading {
+  color: rgb(229, 229, 229);
+}
+
+/* Section-2 */
+
+.h-sec-2 {
+  min-height: calc(100vh + 7em);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-block: 2em;
+}
+.h-sec-2::after {
+  content: "";
+  background-color: var(--clr-primary);
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+.sec-2-text-box {
+  display: flex;
+  flex-direction: column;
+}
+.sec-2-text {
+  color: black;
+}
+.sign-name {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
+}
+.sign-post {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-bold);
+}
+
+/* Adding Animations */
+
+/* Section - 3 */
+
+.h-sec-3 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-primary);
+  position: relative;
+  isolation: isolate;
+  padding-block: 2em;
+}
+.h-sec-3::after {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(1, 1, 1);
+}
+.center {
+  text-align: center;
+}
+
+/* Card */
+
+.h-sec-3-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1em;
+  place-items: center;
+}
+.center {
+  min-width: 100% !important;
+}
+.h-card {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  background-color: var(--clr-primary) !important;
+  column-gap: 1em;
+  padding: 1em 1em;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 1px rgb(62, 62, 62);
+  max-width: 320px;
+}
+.title {
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.25em;
+}
+.card-text {
+  font-size: var(--fs-200);
+}
+
+/* Animations */
+
+/* Section-1 */
+
+.h-sec-1-content {
+  opacity: 0.1;
+  transform: translateY(-35%);
+}
+.intersecting .h-sec-1-content {
+  transform: translate(0);
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 200ms, transform 250ms ease-in-out 500ms;
+}
+.intersecting .h-sec-1-content > * + * {
+  margin-top: 1rem;
+  transition: margin 200ms ease-in-out 850ms;
+}
+
+.intersecting .m-heading {
+  margin-bottom: 2rem;
+  transition: margin 200ms ease-in-out 850ms;
+}
+
+.intersecting .sec-1-text {
+  margin-top: 1rem;
+  transition: margin 200ms ease-in-out 1100ms;
+}
+
+/* Section-2 */
+
+.h-sec-2-content {
+  opacity: 0.1;
+  transform: translateY(15%);
+}
+
+.intersecting .h-sec-2-content {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 100ms, transform 250ms ease-in-out 400ms;
+}
+.intersecting .h-sec-2-content > * + * {
+  margin-top: 1em;
+  transition: margin 200ms ease-in-out 750ms;
+}
+.intersecting .space-1 {
+  margin-top: 1em;
+  transition: margin 200ms ease-in-out 750ms;
+}
+.intersecting .space {
+  margin-top: 1em;
+  transition: margin 200ms ease-in-out 1000ms;
+}
+
+/* Section-3 */
+
+.h-sec-3-content {
+  opacity: 0.1;
+  transform: translateY(10%);
+}
+.intersecting .h-sec-3-content {
+  opacity: 1;
+  transform: translate(0);
+  transition: opacity 250ms ease-in-out 100ms, transform 250ms ease-in-out 400ms;
+}
+.intersecting .h-sec-3-content > * + * {
+  margin-top: 1em;
+  transition: margin 200ms ease-in-out 750ms;
+}
+.intersecting .sec-3-gap {
+  margin-top: 1em;
+  transition: margin 200ms ease-in-out 1000ms;
+}
+
+/* Media Queries */
+
+@media (min-width: 499px) {
+  .h-sec-3 {
+    padding: 1em 0em;
+  }
+  .text {
+    max-width: 50ch;
+  }
+  .card-text {
+    font-size: var(--fs-300);
+  }
+}
+@media (min-width: 799px) {
+  .h-sec-2 {
+    min-height: calc(100vh + 6em);
+  }
+  .h-sec-3-cards {
+    column-gap: 1em;
+    row-gap: 2em;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .btn-div {
+    margin-top: 2em !important;
+  }
+  .card-text {
+    font-size: var(--fs-400);
+  }
+}
+@media (min-width: 1099px) {
+  .h-sec-2 {
+    min-height: calc(70vh);
+  }
+  .h-sec-3-cards {
+    column-gap: 1em;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sec-2-text-box {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .intersecting .space-1 {
+    margin-top: 0em;
+    transition: margin 250ms ease-in 950ms;
+  }
+}
