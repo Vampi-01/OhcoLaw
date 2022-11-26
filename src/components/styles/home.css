@@ -4,7 +4,6 @@
   isolation: isolate;
   position: relative;
   height: calc(100vh - 3.8rem);
-  scroll-snap-align: start;
   display: flex;
   align-items: center;
 }

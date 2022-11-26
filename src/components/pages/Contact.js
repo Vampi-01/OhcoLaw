@@ -1,7 +1,7 @@
 import "../styles/general.css";
 import "../styles/contact.css";
 
-import Phone from "../images/phone.svg";
+import phone from "../images/phone.svg";
 import time from "../images/time.svg";
 import email from "../images/email.svg";
 import location from "../images/location.svg";
@@ -12,132 +12,173 @@ import twitter from "../images/twitter.svg";
 export default function Contact() {
   return (
     <>
-      {/* <section classNameName="contact-section">
+      <section className="contact">
+        {/* Container */}
+
         <div className="container">
-          <div className="map">
-            <h2 className="heading my-1">Where To find us</h2>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13613.054837430625!2d74.23503531802977!3d31.46193119103498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1668697524477!5m2!1sen!2s"
-              width="100%"
-              height="300"
-              AllowFullScreen=""
-              loading="lazy"
-              ReferrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-        <div className="contact-form">
-          <div className="container">
-            <div className="even-columns">
-              <div> */}
-      {/* <!-- Contact Form --> */}
-      {/* <h2 className="heading | my-1">Leave a message</h2>
+          <h2 className="heading">Get in Touch</h2>
+          {/* Contact Grid */}
+
+          <div className="contact-columns">
+            {/* Col-1 */}
+
+            <div className="">
+              {/* Contact-form */}
+
+              <div className="contact-form ">
+                {/* Input - Group */}
 
                 <div className="input-group">
-                  <label className="contact-label" htmlFor="Name">
+                  <label className="form-label" htmlFor="Name">
                     Name
                   </label>
                   <input
-                    className="contact-input"
                     type="text"
                     name="Name"
-                    placeholder="Name..."
+                    className="form-input"
+                    placeholder="Your Name ..."
+                    required
                   />
                 </div>
+                {/* Input - Group */}
+
                 <div className="input-group">
-                  <label className="contact-label" htmlFor="Email">
+                  <label className="form-label" htmlFor="Email">
                     Email
                   </label>
                   <input
-                    className="contact-input"
                     type="email"
-                    placeholder="Email..."
                     name="Email"
+                    className="form-input"
+                    placeholder="Your Email ..."
+                    required
                   />
                 </div>
+                {/* Input - Group */}
+
                 <div className="input-group">
-                  <label className="contact-label" htmlFor="Subject">
-                    Subject
+                  <label className="form-label" htmlFor="Phone">
+                    Contact Number
                   </label>
                   <input
-                    className="contact-input"
-                    type="text"
-                    name="Subject"
-                    placeholder="Subject..."
+                    type="number"
+                    name="Phone"
+                    pattern="[+]{1}[0-9]{11,14}"
+                    className="form-input no-arrow"
+                    placeholder="Your Contact Number ..."
+                    required
                   />
                 </div>
+                {/* Input - Group */}
+
                 <div className="input-group">
-                  <label className="contact-label" htmlFor="Message">
-                    Message
+                  <label className="form-label" htmlFor="Org">
+                    Organization
+                  </label>
+                  <input
+                    type="text"
+                    name="Org"
+                    className="form-input"
+                    placeholder="Your Organization (Not Required)"
+                  />
+                </div>
+                {/* Text - Area */}
+                <div className="input-group">
+                  <label className="form-label" htmlFor="Message">
+                    Leave a Message
                   </label>
                   <textarea
-                    className="contact-input text-area"
-                    rows="6"
+                    className="text-area"
+                    name="Message"
                     cols="25"
-                    placeholder="Leave a message..."
+                    rows="5"
+                    placeholder="How can We help You?"
                   ></textarea>
                 </div>
-                <div className="btn-container">
-                  <button className="btn contact-btn">Send</button>
+                {/* Button */}
+                <div className="input-group">
+                  <div className="btn-container | right">
+                    <button className="btn">Send</button>
+                  </div>
                 </div>
-              </div> */}
+              </div>
+            </div>
 
-      {/* <!-- Contact Form End --> */}
-      {/* 
-              <div>
-                <h2 className="heading | my-1">Contact Us</h2>
-                <ul className="address-list">
-                  <li className="address-item">
-                    <span className="icon">
-                      <img src={Phone} alt="" />
+            {/* Col-1 */}
+            <div className="">
+              <div className="contact-info ">
+                {/* Heading */}
+                <div className="info-content">
+                  {/* Info */}
+
+                  <div className="info">
+                    <span>
+                      <img src={phone} alt="Phone" />
                     </span>
-                    <p className="contact-text">0000-0000000</p>
-                  </li>
-                  <li className="address-item">
-                    <span className="icon">
-                      <img src={email} alt="" />
-                    </span>
-                    <p className="contact-text">Example@example.com</p>
-                  </li>
-                  <li className="address-item">
-                    <span className="icon">
-                      <img src={time} alt="" />
-                    </span>
-                    <p className="contact-text">Mon-Fri 9 A.M - 5 P.M</p>
-                  </li>
-                  <li className="address-item">
-                    <span className="icon">
-                      <img src={location} alt="" />
-                    </span>
-                    <p className="contact-text">
-                      15-A Building 105 Phase 2 Example Street Lahore.
+                    <p className="text">
+                      0300 - 0000000 , 0300 - 0000000 , 042 - 000000
                     </p>
-                  </li>
-                  <li className="social-icon">
-                    <p className="contact-text">Follow Us.</p>
-                    <span className="flex y-center  x-center gap">
-                      <a href="#">
-                        <img className="s-icon" src={facebook} alt="facebook" />
-                      </a>
+                  </div>
 
-                      <a href="#">
-                        <img
-                          className="s-icon"
-                          src={instagram}
-                          alt="instagram"
-                        />
-                      </a>
-                      <a href="#">
-                        <img className="s-icon" src={twitter} alt="twitter" />
-                      </a>
+                  {/* Info */}
+
+                  <div className="info">
+                    <span>
+                      <img src={email} alt="Phone" />
                     </span>
-                  </li>
-                </ul>
+                    <p className="text">Member@ohcolaw.com</p>
+                  </div>
+
+                  {/* Info */}
+
+                  <div className="info">
+                    <span>
+                      <img src={time} alt="Phone" />
+                    </span>
+                    <p className="text">Mon-Fri 9 am to 5 pm</p>
+                  </div>
+
+                  {/* Info */}
+
+                  <div className="info">
+                    <span>
+                      <img src={location} alt="Phone" />
+                    </span>
+                    <p className="text">
+                      Street 101 , Block 4 , Main boulevard , Lahore
+                    </p>
+                  </div>
+
+                  {/* Info */}
+
+                  <div className="social-icon">
+                    <p className="text">Follow Us</p>
+                    <span className="flex gap">
+                      <img className="s-icon" src={facebook} alt="Phone" />
+                      <img className="s-icon" src={instagram} alt="Phone" />
+                      <img className="s-icon" src={twitter} alt="Phone" />
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info End */}
               </div>
             </div>
           </div>
+          <div className="map">
+            <h2 className="heading">Where To find Us</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d982.9617005265235!2d74.40580573260264!3d31.46487107527035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1669473924724!5m2!1sen!2s"
+              width="800"
+              height="600"
+              AllowFullScreen=""
+              loading="lazy"
+              ReferrerPolicy="no-referrer-when-downgrade"
+              className="g-map"
+            ></iframe>
+          </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
