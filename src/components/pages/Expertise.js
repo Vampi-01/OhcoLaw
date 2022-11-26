@@ -16,10 +16,10 @@ export default function Expertise() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 400);
+    }, 750);
   }, []);
   const { ref: sec, inView: isIntersecting } = useInView({
-    threshold: 0.1,
+    rootMargin: "-200px 0px",
     triggerOnce: true,
   });
   let intersectSec = isIntersecting ? "intersecting" : "";

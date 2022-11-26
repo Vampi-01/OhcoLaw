@@ -11,7 +11,7 @@ export default function Team() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 400);
+    }, 750);
   }, []);
   return (
     <>
