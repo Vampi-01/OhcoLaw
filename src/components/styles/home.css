@@ -60,7 +60,7 @@
 /* Section - 3 */
 
 .h-sec-3 {
-  min-height: 100vh;
+  min-height: calc(100vh + 8%);
   display: flex;
   align-items: center;
   background-color: var(--clr-primary);
@@ -115,7 +115,7 @@
 
 .h-sec-1-content {
   opacity: 0.1;
-  transform: translateY(-35%);
+  transform: translateY(8%);
 }
 .intersecting .h-sec-1-content {
   transform: translate(0);
@@ -141,7 +141,7 @@
 
 .h-sec-2-content {
   opacity: 0.1;
-  transform: translateY(15%);
+  transform: translateY(8%);
 }
 
 .intersecting .h-sec-2-content {
@@ -166,7 +166,7 @@
 
 .h-sec-3-content {
   opacity: 0.1;
-  transform: translateY(10%);
+  transform: translateY(8%);
 }
 .intersecting .h-sec-3-content {
   opacity: 1;

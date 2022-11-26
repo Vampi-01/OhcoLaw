@@ -10,6 +10,7 @@
   isolation: isolate;
   padding: 2em 0em;
 }
+
 .expertise::after {
   content: "";
   position: absolute;
@@ -20,20 +21,10 @@
 }
 
 .expertise-content > * + * {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 .center {
   text-align: center;
-}
-
-.expertise-content {
-  transform: translateY(2%);
-  opacity: 0.09;
-}
-.intersecting .expertise-content {
-  transform: translateX(0);
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 300ms, transform 250ms ease-in-out 600ms;
 }
 
 /* Card */
@@ -93,4 +84,14 @@
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
   }
+}
+.expertise > * {
+  transform: translateY(8%);
+  opacity: 0.1;
+}
+.intersecting .expertise > * {
+  transform: translateY(0);
+
+  opacity: 1;
+  transition: opacity 350ms ease-in-out, transform 300ms ease-in-out 250ms;
 }

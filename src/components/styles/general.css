@@ -286,7 +286,7 @@ iframe {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: foo 500ms ease-in-out;
+  animation: foo 300ms ease-in-out;
 }
 @keyframes foo {
   10% {
@@ -512,4 +512,32 @@ iframe {
 }
 .contact-text {
   color: var(--clr-accent);
+}
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: hsl(211, 45%, 14%);
+  z-index: 1;
+}
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: hsl(39, 31%, 58%) transparent hsl(39, 31%, 58%) transparent;
+  border-radius: 50%;
+  animation: spin-anim 400ms linear infinite;
+}
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Team from "./pages/Team";
 import "./styles/general.css";
 import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom";
 
