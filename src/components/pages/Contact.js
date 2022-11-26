@@ -18,7 +18,7 @@ export default function Contact() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 400);
   }, []);
   const { ref: sec, inView: isIntersecting } = useInView({
     threshold: 0.1,

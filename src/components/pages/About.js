@@ -10,7 +10,7 @@ export default function About() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 400);
   }, []);
 
   return (

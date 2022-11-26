@@ -89,7 +89,7 @@
   transform: translateY(8%);
   opacity: 0.1;
 }
-.intersecting .expertise > * {
+.intersecting > * {
   transform: translateY(0);
 
   opacity: 1;

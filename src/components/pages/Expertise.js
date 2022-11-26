@@ -16,7 +16,7 @@ export default function Expertise() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 900);
+    }, 400);
   }, []);
   const { ref: sec, inView: isIntersecting } = useInView({
     threshold: 0.1,
@@ -31,190 +31,186 @@ export default function Expertise() {
           <div className="spinner"></div>
         </div>
       ) : (
-        <div className={`${intersectSec}`}>
-          <section ref={sec} className={`expertise `}>
-            <div className="container">
-              <div className="expertise-content">
-                <div className="div">
-                  <p className="sign-name center ">
-                    &#9866; What we Do &#9866;
-                  </p>
-                  <h2 className="heading center">Our Practice Area</h2>
+        <section ref={sec} className={`expertise ${intersectSec} `}>
+          <div className="container">
+            <div className="expertise-content">
+              <div className="div">
+                <p className="sign-name center ">&#9866; What we Do &#9866;</p>
+                <h2 className="heading center">Our Practice Area</h2>
+              </div>
+              <div className="expertise-cards">
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={corporate} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Corporate Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
                 </div>
-                <div className="expertise-cards">
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={corporate} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Corporate Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={bankruptcy} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={bankruptcy} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Bankruptcy Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Bankruptcy Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={education} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Education Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={education} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={personal} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Personal Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Education Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={realestate} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Real Estate Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={personal} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={family} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Family Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Personal Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={corporate} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Corporate Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={realestate} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={bankruptcy} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Bankruptcy Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Real Estate Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={education} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Education Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={family} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={personal} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Personal Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Family Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={realestate} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Real Estate Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={corporate} alt="" />
                   </div>
-                  {/* Card-1 */}
-                  <div className="e-card">
-                    <div className="card-icon">
-                      <img src={family} alt="" />
-                    </div>
-                    <div className="card-text">
-                      <p className="title">Family Law</p>
-                      <p className="card-text">
-                        This is a sample Text. Only small description Here. This
-                        is a sample Text. Only a small description Here. This is
-                        a sample Text. Only a small description Here.
-                      </p>
-                    </div>
+                  <div className="card-text">
+                    <p className="title">Corporate Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={bankruptcy} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Bankruptcy Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={education} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Education Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={personal} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Personal Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={realestate} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Real Estate Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
+                  </div>
+                </div>
+                {/* Card-1 */}
+                <div className="e-card">
+                  <div className="card-icon">
+                    <img src={family} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <p className="title">Family Law</p>
+                    <p className="card-text">
+                      This is a sample Text. Only small description Here. This
+                      is a sample Text. Only a small description Here. This is a
+                      sample Text. Only a small description Here.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       )}
       ;
     </>
