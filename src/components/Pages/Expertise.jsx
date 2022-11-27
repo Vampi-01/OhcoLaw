@@ -1,14 +1,14 @@
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
-import "../styles/general.css";
-import "../styles/expertise.css";
+import "../../styles/general.css";
+import "../../styles/expertise.css";
 
-import corporate from "../images/home-icons/corporate.svg";
-import personal from "../images/home-icons/personal.svg";
-import education from "../images/home-icons/education.svg";
-import family from "../images/home-icons/family.svg";
-import bankruptcy from "../images/home-icons/bankruptcy.svg";
-import realestate from "../images/home-icons/realestate.svg";
+import corporate from "../../assets/icons/corporate.svg";
+import personal from "../../assets/icons/personal.svg";
+import education from "../../assets/icons/education.svg";
+import family from "../../assets/icons/family.svg";
+import bankruptcy from "../../assets/icons/bankruptcy.svg";
+import realestate from "../../assets/icons/realestate.svg";
 
 export default function Expertise() {
   const [loading, setLoading] = useState(true);

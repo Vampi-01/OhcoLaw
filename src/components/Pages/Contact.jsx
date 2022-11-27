@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import "../styles/general.css";
-import "../styles/contact.css";
+import "../../styles/general.css";
+import "../../styles/contact.css";
 
-import phone from "../images/phone.svg";
-import time from "../images/time.svg";
-import email from "../images/email.svg";
-import location from "../images/location.svg";
-import facebook from "../images/facebook.svg";
-import instagram from "../images/instagram.svg";
-import twitter from "../images/twitter.svg";
+import phone from "../../assets/icons/phone.svg";
+import time from "../../assets/icons/time.svg";
+import email from "../../assets/icons/email.svg";
+import location from "../../assets/icons/location.svg";
+import facebook from "../../assets/icons/facebook.svg";
+import instagram from "../../assets/icons/instagram.svg";
+import twitter from "../../assets/icons/twitter.svg";
 
 export default function Contact() {
   const [loading, setLoading] = useState(true);

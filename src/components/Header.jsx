@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Team from "./pages/Team";
-import "./styles/general.css";
+
+import "../styles/general.css";
 import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom";
 
 function CustomLink({ to, children, onClick }) {
@@ -46,7 +46,6 @@ export default function Header() {
       <header id="header" className={`header ${clicked} `}>
         <div className="header-container | flex x-wide y-center">
           <Link to="/" className="logo">
-            {/* <!-- <img src="/images/logo.svg" alt="Ohcolaw" /> --> */}
             OHco Law
           </Link>
 
@@ -89,32 +88,6 @@ export default function Header() {
               <CustomLink onClick={handleClick1} to="/contact">
                 Contact
               </CustomLink>
-
-              {/* <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/expertise" className="nav-link">
-                  Expertise
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/team" className="nav-link">
-                  Our Team
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/joinus" className="nav-link">
-                  Join us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </div>

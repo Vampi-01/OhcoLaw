@@ -1,13 +1,11 @@
-import "./styles/general.css";
-
-import Home from "./pages/Home";
+import Home from "./Pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import Expertise from "./pages/Expertise";
 import { Route, Routes } from "react-router-dom";
 
-import ScrollToTop from "../components/ScrollToTop";
+import ScrollToTop from "./ScrollToTop";
 export default function Content() {
   return (
     <>

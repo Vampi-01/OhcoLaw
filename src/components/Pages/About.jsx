@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import "../styles/general.css";
-import "../styles/about.css";
+
+import "../../styles/general.css";
+import "../../styles/about.css";
 
 export default function About() {
   const [loading, setLoading] = useState(true);

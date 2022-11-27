@@ -1,6 +1,6 @@
 .h-sec-1 {
   will-change: opacity, transform;
-  background-image: url(../images/home-banner.jpg);
+  background-image: url(../assets/home-banner.jpg);
   background-repeat: no-repeat;
   isolation: isolate;
   position: relative;

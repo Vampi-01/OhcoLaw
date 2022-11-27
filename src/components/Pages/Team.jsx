@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import "../styles/general.css";
-import "../styles/team.css";
-
-import dp from "../images/profile-images/dp-1.jpg";
+import "../../styles/general.css";
+import "../../styles/team.css";
 
 export default function Team() {
   const [loading, setLoading] = useState(true);
