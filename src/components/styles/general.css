@@ -524,8 +524,9 @@ iframe {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background: hsl(211, 45%, 14%);
-  z-index: 20000;
+
+  background: var(--clr-accent);
+  z-index: 200000;
   isolation: isolate;
 }
 .loader-container::after {
@@ -536,11 +537,16 @@ iframe {
   opacity: 0.2;
   z-index: -1;
 }
+.loader {
+  font-family: monospace !important;
+  color: var(--clr-primary);
+}
 .spinner {
+  will-change: transform, border-width;
   width: 30px;
   height: 30px;
   border: 5px solid;
-  border-color: hsl(39, 31%, 58%) transparent hsl(39, 31%, 58%) transparent;
+  border-color: var(--clr-primary) transparent var(--clr-primary) transparent;
   border-radius: 50%;
   animation: spin-anim 500ms linear infinite;
 }

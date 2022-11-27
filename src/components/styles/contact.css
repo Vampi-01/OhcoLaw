@@ -67,6 +67,7 @@
   }
 }
 .contact > * {
+  will-change: opacity;
   opacity: 0.1 !important;
 }
 .intersecting > * {

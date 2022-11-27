@@ -1,4 +1,5 @@
 .h-sec-1 {
+  will-change: opacity, transform;
   background-image: url(../images/home-banner.jpg);
   background-repeat: no-repeat;
   isolation: isolate;
@@ -25,7 +26,8 @@
 /* Section-2 */
 
 .h-sec-2 {
-  min-height: calc(100vh + 7em);
+  will-change: opacity, transform;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -59,13 +61,13 @@
 /* Section - 3 */
 
 .h-sec-3 {
-  min-height: calc(100vh + 20%);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background-color: var(--clr-primary);
   position: relative;
   isolation: isolate;
-  padding-block: 2em;
+  padding-block: 6em;
 }
 .h-sec-3::after {
   content: "";
@@ -84,7 +86,7 @@
 .h-sec-3-cards {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1em;
+  row-gap: 2em;
   place-items: center;
 }
 .center {
@@ -113,72 +115,75 @@
 /* Section-1 */
 
 .h-sec-1-content {
-  opacity: 0.1;
-  transform: translateY(8%);
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(15%);
 }
 .intersecting .h-sec-1-content {
-  transform: translate(0);
   opacity: 1;
-  transition: opacity 250ms ease-in-out 200ms, transform 250ms ease-in-out 500ms;
+  transform: translate(0);
+  transition: opacity 600ms ease-in-out 50ms, transform 750ms ease-in-out 350ms;
 }
 .intersecting .h-sec-1-content > * + * {
   margin-top: 1rem;
-  transition: margin 200ms ease-in-out 850ms;
+  transition: margin 350ms ease-in-out 1200ms;
 }
 
 .intersecting .m-heading {
   margin-bottom: 2rem;
-  transition: margin 200ms ease-in-out 850ms;
+  transition: margin 350ms ease-in-out 1200ms;
 }
 
 .intersecting .sec-1-text {
   margin-top: 1rem;
-  transition: margin 200ms ease-in-out 1100ms;
+  transition: margin 350ms ease-in-out 1600ms;
 }
 
 /* Section-2 */
 
 .h-sec-2-content {
-  opacity: 0.1;
-  transform: translateY(8%);
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(10%);
 }
 
 .intersecting .h-sec-2-content {
-  transform: translateY(0);
   opacity: 1;
-  transition: opacity 250ms ease-in-out 100ms, transform 250ms ease-in-out 400ms;
+  transform: translateY(0);
+  transition: opacity 600ms ease-in-out 50ms, transform 750ms ease-in-out 350ms;
 }
 .intersecting .h-sec-2-content > * + * {
   margin-top: 1em;
-  transition: margin 200ms ease-in-out 750ms;
+  transition: margin 350ms ease-in-out 1200ms;
 }
 .intersecting .space-1 {
   margin-top: 1em;
-  transition: margin 200ms ease-in-out 750ms;
+  transition: margin 350ms ease-in-out 1200ms;
 }
 .intersecting .space {
   margin-top: 1em;
-  transition: margin 200ms ease-in-out 1000ms;
+  transition: margin 200ms ease-in-out 1600ms;
 }
 
 /* Section-3 */
 
 .h-sec-3-content {
-  opacity: 0.1;
+  will-change: opacity, transform;
+  opacity: 0;
   transform: translateY(8%);
 }
 .intersecting .h-sec-3-content {
   opacity: 1;
-  transform: translate(0);
-  transition: opacity 250ms ease-in-out 100ms, transform 250ms ease-in-out 400ms;
+  transform: translateY(0);
+  transition: opacity 600ms ease-in-out 50ms, transform 750ms ease-in-out 350ms;
 }
 .intersecting .h-sec-3-content > * + * {
-  margin-top: 1em;
-  transition: margin 200ms ease-in-out 750ms;
+  margin-top: 2em;
+  transition: margin 350ms ease-in-out 1200ms;
 }
 .intersecting .sec-3-gap {
   margin-top: 1em;
-  transition: margin 200ms ease-in-out 1000ms;
+  transition: margin 200ms ease-in-out 1600ms;
 }
 
 /* Media Queries */
@@ -196,7 +201,7 @@
 }
 @media (min-width: 799px) {
   .h-sec-2 {
-    min-height: calc(100vh + 6em);
+    min-height: 100vh;
   }
   .h-sec-3-cards {
     column-gap: 1em;
