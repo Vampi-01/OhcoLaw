@@ -6,10 +6,9 @@ import "../styles/team.css";
 import dp from "../images/profile-images/dp-1.jpg";
 
 export default function Team() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);

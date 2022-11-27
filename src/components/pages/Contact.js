@@ -12,10 +12,9 @@ import instagram from "../images/instagram.svg";
 import twitter from "../images/twitter.svg";
 
 export default function Contact() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);

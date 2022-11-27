@@ -4,10 +4,9 @@ import "../styles/general.css";
 import "../styles/about.css";
 
 export default function About() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);

@@ -12,13 +12,12 @@ import bankruptcy from "../images/home-icons/bankruptcy.svg";
 import realestate from "../images/home-icons/realestate.svg";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3500);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
     rootMargin: "0px 0px",
