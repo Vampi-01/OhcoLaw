@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2300);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
     rootMargin: "0px 0px",
@@ -40,14 +40,7 @@ export default function Home() {
       {loading ? (
         <div className="loader-container">
           <h1 className="heading">OHCO LAW.</h1>
-          <p className="loader-text">Please Be Patient</p>
           <div className="spinner"></div>
-          <p className="ad">
-            Created By <br />
-          </p>
-          <span className="ad-name">
-            Abdullah <br /> dev.vampi@gmail.com
-          </span>
         </div>
       ) : (
         <div className="home-wrapper">

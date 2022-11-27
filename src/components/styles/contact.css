@@ -67,11 +67,9 @@
   }
 }
 .contact > * {
-  transform: translateY(8%) !important;
   opacity: 0.1 !important;
 }
 .intersecting > * {
-  transform: translateY(0) !important;
   opacity: 1 !important;
-  transition: opacity 350ms ease-in-out, transform 300ms ease-in-out 250ms !important;
+  transition: opacity 250ms ease-in-out;
 }

@@ -563,26 +563,3 @@ iframe {
     border-width: 5px;
   }
 }
-.loader-text {
-  font-size: var(--fs-200);
-  font-weight: var(--fw-bold);
-  animation: lit 1000ms linear infinite;
-}
-@keyframes lit {
-  0% {
-    color: hsl(39, 70%, 85%);
-  }
-  100% {
-    color: hsl(39, 31%, 58%);
-  }
-}
-.ad {
-  font-size: var(--fs-100);
-  font-weight: var(--fw-bold);
-}
-.ad-name {
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-200);
-  text-align: center;
-  color: var(--clr-accent);
-}
