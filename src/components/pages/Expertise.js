@@ -16,7 +16,7 @@ export default function Expertise() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1200);
   }, []);
   const { ref: secEx, inView: isIntersectingEx } = useInView({
     rootMargin: "0px 0px",

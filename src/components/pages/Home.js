@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 3000);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
     rootMargin: "0px 0px",
@@ -25,12 +25,12 @@ export default function Home() {
   });
   let intersectSec1 = isIntersectingSec1 ? "intersecting" : "";
   const { ref: sec2, inView: isIntersectingSec2 } = useInView({
-    rootMargin: "-200px 0px",
+    rootMargin: "-100px 0px",
     triggerOnce: true,
   });
   let intersectSec2 = isIntersectingSec2 ? "intersecting" : "";
   const { ref: sec3, inView: isIntersectingSec3 } = useInView({
-    rootMargin: "-200px 0px",
+    rootMargin: "-100px 0px",
     triggerOnce: true,
   });
   let intersectSec3 = isIntersectingSec3 ? "intersecting" : "";

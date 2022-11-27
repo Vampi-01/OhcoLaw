@@ -17,7 +17,7 @@ export default function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1200);
   }, []);
   const { ref: secCon, inView: isIntersectingCon } = useInView({
     rootMargin: "0px 0px",

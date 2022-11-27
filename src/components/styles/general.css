@@ -528,17 +528,28 @@ iframe {
 .spinner {
   width: 30px;
   height: 30px;
-  border: 3px solid;
+  border: 5px solid;
   border-color: hsl(39, 31%, 58%) transparent hsl(39, 31%, 58%) transparent;
   border-radius: 50%;
-  animation: spin-anim 250ms linear infinite;
+  animation: spin-anim 500ms ease-in-out infinite;
 }
 @keyframes spin-anim {
   0% {
     transform: rotate(0deg);
+    border-width: 1px;
+  }
+  25% {
+    border-width: 2px;
+  }
+  50% {
+    border-width: 3px;
+  }
+  75% {
+    border-width: 4px;
   }
   100% {
     transform: rotate(360deg);
+    border-width: 5px;
   }
 }
 .loader-text {
