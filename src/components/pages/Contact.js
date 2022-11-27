@@ -17,7 +17,7 @@ export default function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 1000);
   }, []);
   const { ref: secCon, inView: isIntersectingCon } = useInView({
     rootMargin: "0px 0px",
@@ -30,6 +30,12 @@ export default function Contact() {
         <div className="loader-container">
           <h1 className="heading">OHCO LAW.</h1>
           <div className="spinner"></div>
+          <p className="ad">
+            Created By <br />
+          </p>
+          <span className="ad-name">
+            Abdullah <br /> dev.vampi@gmail.com
+          </span>
         </div>
       ) : (
         <section ref={secCon} className={`contact ${intersectCON}`}>
@@ -81,7 +87,7 @@ export default function Contact() {
                       Contact Number
                     </label>
                     <input
-                      type="number"
+                      type="tel"
                       name="Phone"
                       pattern="[+]{1}[0-9]{11,14}"
                       className="form-input no-arrow"
@@ -192,7 +198,7 @@ export default function Contact() {
                 width="800"
                 height="600"
                 AllowFullScreen=""
-                loading="lazy"
+                // loading="lazy"
                 ReferrerPolicy="no-referrer-when-downgrade"
                 className="g-map"
               ></iframe>

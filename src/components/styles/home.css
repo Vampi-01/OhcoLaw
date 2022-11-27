@@ -30,11 +30,12 @@
   display: flex;
   align-items: center;
   padding-block: 2em;
+  isolation: isolate;
 }
 .h-sec-2::after {
   content: "";
-  background-color: var(--clr-primary);
-  opacity: 0.2;
+  background-color: white;
+  opacity: 0.7;
   position: absolute;
   z-index: -1;
   inset: 0;

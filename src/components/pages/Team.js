@@ -11,7 +11,7 @@ export default function Team() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 1000);
   }, []);
   return (
     <>
@@ -19,6 +19,12 @@ export default function Team() {
         <div className="loader-container">
           <h1 className="heading">OHCO LAW.</h1>
           <div className="spinner"></div>
+          <p className="ad">
+            Created By <br />
+          </p>
+          <span className="ad-name">
+            Abdullah <br /> dev.vampi@gmail.com
+          </span>
         </div>
       ) : (
         <div>
