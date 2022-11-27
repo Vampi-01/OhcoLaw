@@ -527,12 +527,12 @@ iframe {
   z-index: 1;
 }
 .spinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
   border-color: hsl(39, 31%, 58%) transparent hsl(39, 31%, 58%) transparent;
   border-radius: 50%;
-  animation: spin-anim 400ms linear infinite;
+  animation: spin-anim 300ms linear infinite;
 }
 @keyframes spin-anim {
   0% {
@@ -541,4 +541,8 @@ iframe {
   100% {
     transform: rotate(360deg);
   }
+}
+.loader-text {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
 }

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import "../styles/general.css";
 import "../styles/team.css";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 import dp from "../images/profile-images/dp-1.jpg";
 
 export default function Team() {
@@ -11,7 +12,7 @@ export default function Team() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 750);
+    }, 1500);
   }, []);
   return (
     <>

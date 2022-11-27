@@ -18,7 +18,7 @@ export default function Home() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2500);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
     rootMargin: "-200px 0px",
@@ -41,6 +41,7 @@ export default function Home() {
       {loading ? (
         <div className="loader-container">
           <h1 className="heading">OHCO LAW.</h1>
+          <p className="loader-text">Please Be Patient</p>
           <div className="spinner"></div>
         </div>
       ) : (

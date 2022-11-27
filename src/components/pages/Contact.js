@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import "../styles/general.css";
 import "../styles/contact.css";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import phone from "../images/phone.svg";
 import time from "../images/time.svg";
@@ -18,13 +18,13 @@ export default function Contact() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 750);
+    }, 1500);
   }, []);
-  const { ref: sec, inView: isIntersecting } = useInView({
-    rootMargin: "-200px 0px",
+  const { ref: secCon, inView: isIntersectingCon } = useInView({
+    rootMargin: "0px 0px",
     triggerOnce: true,
   });
-  let intersect = isIntersecting ? "intersecting" : "";
+  let intersectCON = isIntersectingCon ? "intersecting" : "";
   return (
     <>
       {loading ? (
@@ -33,7 +33,7 @@ export default function Contact() {
           <div className="spinner"></div>
         </div>
       ) : (
-        <section ref={sec} className={`contact ${intersect}`}>
+        <section ref={secCon} className={`contact ${intersectCON}`}>
           {/* Container */}
 
           <div className="container">

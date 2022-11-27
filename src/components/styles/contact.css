@@ -71,7 +71,7 @@
   opacity: 0.1;
 }
 .intersecting > * {
-  transform: translateY(0);
-  opacity: 1;
-  transition: opacity 350ms ease-in-out, transform 300ms ease-in-out 250ms;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  transition: opacity 350ms ease-in-out, transform 300ms ease-in-out 250ms !important;
 }

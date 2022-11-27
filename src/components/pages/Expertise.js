@@ -1,3 +1,4 @@
+import "../styles/general.css";
 import "../styles/expertise.css";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
@@ -16,13 +17,13 @@ export default function Expertise() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 750);
+    }, 1500);
   }, []);
-  const { ref: sec, inView: isIntersecting } = useInView({
-    rootMargin: "-200px 0px",
+  const { ref: secEx, inView: isIntersectingEx } = useInView({
+    rootMargin: "0px 0px",
     triggerOnce: true,
   });
-  let intersectSec = isIntersecting ? "intersecting" : "";
+  let intersectSecEX = isIntersectingEx ? "intersecting" : "";
   return (
     <>
       {loading ? (
@@ -31,7 +32,7 @@ export default function Expertise() {
           <div className="spinner"></div>
         </div>
       ) : (
-        <section ref={sec} className={`expertise ${intersectSec} `}>
+        <section ref={secEx} className={`expertise ${intersectSecEX}`}>
           <div className="container">
             <div className="expertise-content">
               <div className="div">
