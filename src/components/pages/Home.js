@@ -1,8 +1,8 @@
-import "../styles/general.css";
-import "../styles/home.css";
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import "../styles/general.css";
+import "../styles/home.css";
 
 import corporate from "../images/home-icons/corporate.svg";
 import personal from "../images/home-icons/personal.svg";
@@ -18,10 +18,10 @@ export default function Home() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3000);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
-    rootMargin: "-200px 0px",
+    rootMargin: "0px 0px",
     triggerOnce: true,
   });
   let intersectSec1 = isIntersectingSec1 ? "intersecting" : "";

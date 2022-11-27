@@ -67,8 +67,8 @@
   }
 }
 .contact > * {
-  transform: translateY(8%);
-  opacity: 0.1;
+  transform: translateY(8%) !important;
+  opacity: 0.1 !important;
 }
 .intersecting > * {
   transform: translateY(0) !important;

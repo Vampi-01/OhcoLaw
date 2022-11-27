@@ -1,7 +1,7 @@
-import "../styles/general.css";
-import "../styles/contact.css";
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import "../styles/general.css";
+import "../styles/contact.css";
 
 import phone from "../images/phone.svg";
 import time from "../images/time.svg";
@@ -18,7 +18,7 @@ export default function Contact() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
   }, []);
   const { ref: secCon, inView: isIntersectingCon } = useInView({
     rootMargin: "0px 0px",

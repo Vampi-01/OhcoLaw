@@ -435,17 +435,7 @@ iframe {
   font-size: var(--fs-label);
   font-weight: var(--fw-bold);
 }
-.no-arrow {
-  -moz-appearance: textfield;
-}
-.no-arrow::-webkit-inner-spin-button {
-  display: none;
-}
-.no-arrow::-webkit-outer-spin-button,
-.no-arrow::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+
 .btn-container {
   /* text-align: center !important; */
   width: 100%;
@@ -524,7 +514,16 @@ iframe {
   align-items: center;
   position: fixed;
   background: hsl(211, 45%, 14%);
-  z-index: 1;
+  z-index: 20000;
+  isolation: isolate;
+}
+.loader-container::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: black;
+  opacity: 0.2;
+  z-index: -1;
 }
 .spinner {
   width: 30px;
@@ -532,7 +531,7 @@ iframe {
   border: 3px solid;
   border-color: hsl(39, 31%, 58%) transparent hsl(39, 31%, 58%) transparent;
   border-radius: 50%;
-  animation: spin-anim 300ms linear infinite;
+  animation: spin-anim 250ms linear infinite;
 }
 @keyframes spin-anim {
   0% {

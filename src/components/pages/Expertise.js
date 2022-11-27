@@ -1,7 +1,7 @@
-import "../styles/general.css";
-import "../styles/expertise.css";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
+import "../styles/general.css";
+import "../styles/expertise.css";
 
 import corporate from "../images/home-icons/corporate.svg";
 import personal from "../images/home-icons/personal.svg";
@@ -17,7 +17,7 @@ export default function Expertise() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
   }, []);
   const { ref: secEx, inView: isIntersectingEx } = useInView({
     rootMargin: "0px 0px",
