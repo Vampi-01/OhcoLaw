@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import "../../styles/general.css";
@@ -17,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 500);
   }, []);
   const { ref: sec1, inView: isIntersectingSec1 } = useInView({
     rootMargin: "0px 0px",
@@ -38,9 +39,14 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <h1 className="heading loader">OHCO LAW.</h1>
-          <div className="spinner"></div>
+        <div className="loader-container" loader="page">
+          <h1 className="heading" loader_heading="true">
+            Home
+          </h1>
+          {/* <div className="spinner"></div> */}
+          <div className="bar" loader="page">
+            <div className="progress" loader="page"></div>
+          </div>
         </div>
       ) : (
         <div className="home-wrapper">
@@ -52,27 +58,15 @@ export default function Home() {
             <div className="container">
               <div className="h-sec-1-content">
                 <h2 className="heading">Need Any Help?</h2>
-                <h1 className="m-heading">We Fight For Right</h1>
+                <h1 className="m-heading">We make the difference</h1>
                 <div>
                   <p className="text">
-                    This is a sample Text. Only small description Here. This is
-                    a sample Text. Only a small description Here. This is a
-                    sample Text. Only a small description Here.This is a sample
-                    Text. Only small description Here. This is a sample Text.
-                    Only a small description Here. This is a sample Text. Only a
-                    small description Here. This is a sample Text. Only small
-                    description Here. This is a sample Text.
-                  </p>
-                  <p className="text sec-1-text">
-                    This is a sample Text. Only small description Here. This is
-                    a sample Text. Only a small description Here. This is a
-                    sample Text. Only a small description Here.This is a sample
-                    Text.
+                    The journey of thousand miles starts with a single step.
                   </p>
                 </div>
                 <div>
-                  <Link to="/contact">
-                    <button className="btn btn-cta">Contact Us</button>
+                  <Link to="/about">
+                    <button className="btn btn-cta">Explore Our firm</button>
                   </Link>
                 </div>
               </div>

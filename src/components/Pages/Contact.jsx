@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+
 import "../../styles/general.css";
 import "../../styles/contact.css";
 
@@ -17,7 +18,7 @@ export default function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 500);
   }, []);
   const { ref: secCon, inView: isIntersectingCon } = useInView({
     rootMargin: "0px 0px",
@@ -27,16 +28,21 @@ export default function Contact() {
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <h1 className="heading loader">OHCO LAW.</h1>
-          <div className="spinner"></div>
+        <div className="loader-container " loader="page">
+          <h1 className="heading" loader_heading="true">
+            Contact
+          </h1>
+          {/* <div className="spinner"></div> */}
+          <div className="bar" loader="page">
+            <div className="progress" loader="page"></div>
+          </div>
         </div>
       ) : (
         <section ref={secCon} className={`contact ${intersectCON}`}>
           {/* Container */}
 
           <div className="container">
-            <h2 className="heading">Get in Touch</h2>
+            <h2 className="heading">Contact</h2>
             {/* Contact Grid */}
 
             <div className="contact-columns">

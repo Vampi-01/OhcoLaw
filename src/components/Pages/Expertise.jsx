@@ -16,7 +16,7 @@ export default function Expertise() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 500);
   }, []);
   const { ref: secEx, inView: isIntersectingEx } = useInView({
     rootMargin: "0px 0px",
@@ -26,9 +26,14 @@ export default function Expertise() {
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <h1 className="heading loader">OHCO LAW.</h1>
-          <div className="spinner"></div>
+        <div className="loader-container" loader="page">
+          <h1 className="heading" loader_heading="true">
+            Expertise
+          </h1>
+          {/* <div className="spinner"></div> */}
+          <div className="bar" loader="page">
+            <div className="progress" loader="page"></div>
+          </div>
         </div>
       ) : (
         <section ref={secEx} className={`expertise ${intersectSecEX}`}>

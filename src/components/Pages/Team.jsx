@@ -9,14 +9,19 @@ export default function Team() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 500);
   }, []);
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <h1 className="heading loader">OHCO LAW.</h1>
-          <div className="spinner"></div>
+        <div className="loader-container " loader="page">
+          <h1 className="heading" loader_heading="true">
+            Our Team
+          </h1>
+          {/* <div className="spinner"></div> */}
+          <div className="bar" loader="page">
+            <div className="progress" loader="page"></div>
+          </div>
         </div>
       ) : (
         <div>
