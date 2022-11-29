@@ -27,8 +27,8 @@ export default function Expertise() {
     <>
       {loading ? (
         <div className="loader-container" loader="page">
-          <h1 className="heading" loader_heading="true">
-            Expertise
+          <h1 className="heading" loader_heading="true" loader="page">
+            OHCO LAW
           </h1>
           {/* <div className="spinner"></div> */}
           <div className="bar" loader="page">

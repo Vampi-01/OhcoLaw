@@ -46,7 +46,7 @@ export default function Header() {
       <header id="header" className={`header ${clicked} `}>
         <div className="header-container | flex x-wide y-center">
           <Link to="/" className="logo">
-            OHco Law
+            <span className="lit-logo">OHco Law</span>
           </Link>
 
           {/* <!-- !: Ham Menu --> */}

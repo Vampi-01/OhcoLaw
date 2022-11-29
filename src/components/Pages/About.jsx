@@ -16,8 +16,8 @@ export default function About() {
     <>
       {loading ? (
         <div className="loader-container " loader="page">
-          <h1 className="heading" loader_heading="true">
-            About OHCO Law
+          <h1 className="heading" loader_heading="true" loader="page">
+            OHCO Law
           </h1>
           {/* <div className="spinner"></div> */}
           <div className="bar" loader="page">

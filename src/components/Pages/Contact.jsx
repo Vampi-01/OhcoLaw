@@ -29,8 +29,8 @@ export default function Contact() {
     <>
       {loading ? (
         <div className="loader-container " loader="page">
-          <h1 className="heading" loader_heading="true">
-            Contact
+          <h1 className="heading" loader_heading="true" loader="page">
+            OHCO LAW
           </h1>
           {/* <div className="spinner"></div> */}
           <div className="bar" loader="page">
