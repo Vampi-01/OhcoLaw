@@ -18,7 +18,7 @@ export default function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 300);
   }, []);
   const { ref: secCon, inView: isIntersectingCon } = useInView({
     rootMargin: "0px 0px",
@@ -32,10 +32,7 @@ export default function Contact() {
           <h1 className="heading" loader_heading="true" loader="page">
             OHCO LAW
           </h1>
-          {/* <div className="spinner"></div> */}
-          <div className="bar" loader="page">
-            <div className="progress" loader="page"></div>
-          </div>
+          <div className="spinner"></div>
         </div>
       ) : (
         <section ref={secCon} className={`contact ${intersectCON}`}>

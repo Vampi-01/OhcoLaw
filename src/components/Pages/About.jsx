@@ -9,7 +9,7 @@ export default function About() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 300);
   }, []);
 
   return (
@@ -19,10 +19,7 @@ export default function About() {
           <h1 className="heading" loader_heading="true" loader="page">
             OHCO Law
           </h1>
-          {/* <div className="spinner"></div> */}
-          <div className="bar" loader="page">
-            <div className="progress" loader="page"></div>
-          </div>
+          <div className="spinner"></div>
         </div>
       ) : (
         <div className="about-section"></div>

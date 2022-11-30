@@ -46,7 +46,8 @@ export default function Header() {
       <header id="header" className={`header ${clicked} `}>
         <div className="header-container | flex x-wide y-center">
           <Link to="/" className="logo">
-            <span className="lit-logo">OHco Law</span>
+            OHCO
+            <span className="lit-logo"> Law</span>
           </Link>
 
           {/* <!-- !: Ham Menu --> */}
@@ -79,10 +80,13 @@ export default function Header() {
                 About us
               </CustomLink>
               <CustomLink onClick={handleClick1} to="/expertise">
-                Expertise
+                News and Insights
               </CustomLink>
               <CustomLink onClick={handleClick1} to="/team">
-                Our Team
+                Team
+              </CustomLink>
+              <CustomLink onClick={handleClick1} to="/career">
+                Careers
               </CustomLink>
 
               <CustomLink onClick={handleClick1} to="/contact">

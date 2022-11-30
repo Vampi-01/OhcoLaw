@@ -23,6 +23,7 @@ export default function App() {
             <div className="progress"></div>
           </div>
           <p className="greet-loader">Welcome</p>
+          <div className="spinner" main-loader="true"></div>
         </div>
       ) : (
         <>

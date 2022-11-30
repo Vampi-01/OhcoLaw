@@ -1,20 +1,26 @@
 :root {
   /* Colors */
 
-  /* --clr-primary: hsl(209, 42%, 16%); */
-  --clr-primary: hsl(211, 45%, 14%);
-  --clr-bg-accent: #2d0000;
-  /* --clr-accent: hsl(38, 57%, 46%); */
-  --clr-accent: hsl(41, 42%, 60%);
+  --clr-primary: hsl(219, 88%, 10%);
+  --clr-accent: rgb(239, 239, 239);
+  --clr-btn: hsl(38, 74%, 49%);
+  /* --clr-accent: hsl(38, 85%, 32%); */
+  --clr-text: hsl(41, 42%, 60%);
+  --clr-btn-hover: hsl(38, 74%, 49%);
 
   --clr-nuetral-100: hsl(100, 100%, 100%);
   --clr-nuetral-200: hsl(50, 63%, 77%);
   /* --clr-btn-hover: hsl(38, 74%, 49%); */
-  --clr-btn-hover: hsl(38, 88%, 38%);
+  /* --clr-accent: hsl(38, 57%, 46%); */
+
   --clr-black-100: hsl(0, 0%, 10%);
   --clr-black-200: hsl(0, 0%, 15%);
   --clr-black-300: hsl(0, 0%, 20%);
+  --clr-nav-hover: hsl(38, 74%, 49%);
 
+  /* --clr-header-bg: hsl(213, 39%, 29%); */
+  --clr-nav: hsl(0, 0%, 100%);
+  --clr-nav-bg: hsl(0, 0%, 0%);
   /* Font Family */
 
   --ff-body: "Montserrat", sans-serif;
@@ -43,9 +49,9 @@
   /* 24px */
   --fs-600: 1.5rem;
   /* 36px */
-  --fs-700: 2.25rem;
-  /* 48px */
-  --fs-800: 3rem;
+  --fs-700: 2.5rem;
+  /* 64px */
+  --fs-800: 4rem;
 
   /* font sizes */
 
@@ -54,7 +60,7 @@
 
   --fs-logo: var(--fs-400);
   --fs-link: var(--fs-300);
-  --fs-body-text: var(--fs-300);
+  --fs-body-text: var(--fs-400);
   --fs-title: var(--fs-400);
   --fs-primary-nav: var(--fs-500);
   --fs-sub-heading: var(--fs-600);
@@ -136,6 +142,7 @@ h5,
 h6 {
   font-family: var(--ff-heading) !important;
   line-height: 1;
+  color: var(--clr-text);
 }
 
 h1 {
@@ -147,7 +154,7 @@ h1 {
 p {
   font-size: var(--fs-body-text);
   font-weight: var(--fw-text);
-  color: var(--clr-accent);
+  color: var(--clr-text);
 }
 
 /* * - - Make images easier to work with - - */
@@ -180,7 +187,7 @@ iframe {
 }
 .line {
   fill: none;
-  stroke: var(--clr-primary);
+  stroke: var(--clr-nav);
   stroke-width: 6;
   stroke-linecap: round;
   transition: stroke-dasharray 350ms ease-in-out,
@@ -219,20 +226,21 @@ iframe {
 /* Header */
 
 .header {
-  padding-block: 0.75em;
+  padding-block: 0.25em;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 2px solid var(--clr-primary);
+  /* border-bottom: 2px solid var(--clr-primary); */
   z-index: 1500;
   gap: 2em;
-  background: var(--clr-primary);
-  background: linear-gradient(
-    45deg,
-    var(--clr-primary) 95%,
-    var(--clr-btn-hover) 95%
-  );
+  background-color: var(--clr-header-bg);
+  transition: background-color 50ms ease-in-out 215ms;
+}
+
+.active {
+  background-color: black;
+  transition: background-color 50ms ease-in-out;
 }
 
 /* Logo */
@@ -240,11 +248,19 @@ iframe {
 .logo {
   font-size: var(--fs-logo);
   font-weight: bold;
-  color: var(--clr-primary);
+  border-radius: 2px;
+  color: var(--clr-btn);
+  padding: 0.25em;
+  position: relative;
+  isolation: isolate;
 }
+
 .lit-logo {
-  color: var(--clr-btn-hover);
-  margin-right: 0.1em !important;
+  color: var(--clr-nav);
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  padding: 0.25em;
 }
 
 /* Main Nav */
@@ -256,10 +272,10 @@ iframe {
   z-index: 1500;
   right: 0;
   height: 0vh;
-  background-color: var(--clr-btn-hover);
-  border-block: 1px solid var(--clr-accent);
+  background-color: var(--clr-nav-bg);
+  border-block: 1px solid var(--clr-btn);
   visibility: collapse;
-  transition: height 250ms ease-in-out 50ms, visibility 0s ease-in 400ms;
+  transition: height 150ms ease-in-out, visibility 0s ease-in 400ms;
 }
 .main-nav-list {
   flex-direction: column;
@@ -270,7 +286,7 @@ iframe {
 /* Nav Link */
 
 .nav-link {
-  color: var(--clr-btn-hover);
+  color: var(--clr-nav);
   font-size: var(--fs-primary-nav);
   font-weight: var(--fw-nav);
   padding: 0.5em;
@@ -278,14 +294,14 @@ iframe {
   position: relative;
 }
 .nav-link:hover {
-  color: var(--clr-nuetral-200);
+  color: var(--clr-nav-hover);
   transition: color 75ms ease-in-out;
 }
 
 /* Nav Active class */
 
 .current {
-  color: var(--clr-btn-hover);
+  color: var(--clr-btn) !important;
   transition: color 425ms linear;
 }
 .current::after {
@@ -294,7 +310,7 @@ iframe {
   border-radius: 50px;
   height: 4px;
   position: absolute;
-  background-color: var(--clr-btn-hover);
+  background-color: var(--clr-btn) !important;
   bottom: 0;
   left: 0;
   right: 0;
@@ -342,7 +358,7 @@ iframe {
 
 .heading {
   font-size: var(--fs-sub-heading);
-  color: var(--clr-accent);
+  color: var(--clr-text);
   font-weight: var(--fw-sub-heading);
 }
 .social-icon {
@@ -384,11 +400,11 @@ iframe {
   color: var(--clr-primary);
   font-size: var(--fs-text);
   font-weight: var(--fw-semi-bold);
-  background-color: var(--clr-accent);
+  background-color: var(--clr-btn) !important;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: var(--clr-btn-hover);
+  background-color: var(--clr-btn-hover) !important;
   box-shadow: 0 0 4px rgb(150, 150, 150);
   transition: background-color 175ms ease-in, box-shadow 175ms ease-in;
   color: rgb(0, 0, 0);
@@ -484,7 +500,7 @@ iframe {
     --fs-logo: var(--fs-600);
     --fs-sub-heading: var(--fs-700);
     --fs-main-heading: var(--fs-800);
-    --fs-body-text: var(--fs-400);
+    --fs-body-text: var(--fs-500);
 
     /* Font Weights */
     --fw-sub-heading: var(--fw-bold);
@@ -510,6 +526,12 @@ iframe {
   .nav-item {
     opacity: 1 !important;
   }
+  .nav-link {
+    color: var(--clr-nav);
+  }
+  .nav-link::after {
+    background-color: var(--clr-nav);
+  }
   .text {
     max-width: 50ch;
   }
@@ -534,7 +556,7 @@ iframe {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-image: url(../assets/loader_img.jpg);
+  background-image: url(../assets/loader-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,72 +571,71 @@ iframe {
   opacity: 0.5;
   z-index: -1;
 }
-.loader-container[loader="page"] {
-  background-image: none !important;
-  /* background: var(--clr-primary); */
-  /* background: rgb(20, 35, 52); */
-  background: linear-gradient(
-    45deg,
-    rgba(20, 35, 52, 1) 77%,
-    rgba(217, 150, 32, 1) 77%
-  ) !important;
-}
 
 .heading[loader_heading="true"] {
   font-family: monospace !important;
   font-size: 2.25rem !important;
-  color: var(--clr-btn-hover);
+  color: var(--clr-btn);
   /* margin-bottom: 0.25em; */
 }
 
-/* .spinner {
+.spinner {
   will-change: transform, border-width;
-  width: 30px;
-  height: 30px;
-  border: 5px solid;
-  border-color: var(--clr-accent) transparent var(--clr-accent) transparent;
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+  border-color: var(--clr-btn) transparent var(--clr-btn) transparent;
   border-radius: 50%;
-  animation: spin-anim 500ms linear infinite;
+  animation: spin-anim 200ms linear infinite;
 }
+.spinner[main-loader="true"] {
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+  animation: show 200ms linear infinite;
+  animation-delay: 3500ms;
+}
+
 @keyframes spin-anim {
   0% {
     transform: rotate(0deg);
-    border-width: 1px;
   }
-  25% {
-    border-width: 2px;
-  }
-  50% {
-    border-width: 3px;
-  }
-  75% {
-    border-width: 4px;
-  }
+
   100% {
     transform: rotate(360deg);
-    border-width: 5px;
   }
-} */
+}
+@keyframes show {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
 .bar {
   will-change: opacity;
   width: 130px;
-  height: 10px;
+  height: 8px;
   padding: 0.15em;
-  border: 1px solid var(--clr-btn-hover);
+
   opacity: 0;
   animation: hide 3000ms ease-in;
+  background-color: black;
 }
 .bar[loader="page"] {
   animation: none;
   opacity: 1;
   width: 80px;
   height: 8px;
-  background-color: var(--clr-primary);
+  background-color: black;
 }
 
 .progress {
   will-change: width;
-  background-color: var(--clr-btn-hover);
+  background-color: var(--clr-btn);
   height: 100%;
   animation: prog 3000ms ease-in;
 }
@@ -644,7 +665,7 @@ iframe {
   }
 }
 .progress[loader="page"] {
-  animation: prog-page 500ms ease-in-out;
+  animation: prog-page 300ms ease-in-out;
   /* background-color: var(--clr-primary); */
 }
 @keyframes prog-page {
@@ -669,9 +690,9 @@ iframe {
   font-weight: var(--fw-bold);
   font-size: var(--fs-500) !important;
   transform: translateY(10%);
-  color: var(--clr-btn-hover);
+  color: var(--clr-btn);
   opacity: 0;
-  animation: header-fadein 1000ms ease-in-out 3000ms;
+  animation: header-fadein 600ms ease-in-out 3000ms;
 }
 @keyframes header-fadein {
   30% {
